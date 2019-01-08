@@ -84,8 +84,12 @@ class Share
 
     db.prepare("find_by_name", sql)
     results = db.exec_prepared("find_by_name")
-    p results
-    return results.map {|results| Share.new(results)}
+    final_results = results.map {|results| Share.new(results)}
+    if final_results.any?
+      p final_results
+    else
+      p nil
+    end
     db.close
   end
 

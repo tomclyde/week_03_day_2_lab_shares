@@ -46,3 +46,4 @@ share3.update()
 #share2.delete_company
 
 Share.find_by_name('Lloyds')
+Share.find_by_name('abc')
